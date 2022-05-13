@@ -58,8 +58,19 @@ public class HumanArrayImpl implements HumanArray{
 	@Override
 	public Human findHumanByName(String name) {
 		// TODO Auto-generated method stub
+		
+		for (Human h: this.humanArray){
+			if (h.getName()=="Null") {
+				return h;
+			}
+			if(h.getName()== name) {
+				return h;
+			}
+		}
+		System.out.println("doesnt exist");
 		return null;
 	}
+	
 
 	@Override
 	public void removeHumanByName(String name) {
@@ -68,15 +79,16 @@ public class HumanArrayImpl implements HumanArray{
 	}
 
 	@Override
-	public void printAllTheHumans() {
+	public human printAllTheHumans() {
 
 		for(Human h: this.humanArray) {
-			if(h!= null) {
-				System.out.println(h.getName());
+			// check if human exist at this point and if that human has a matching name
+			if(h!= null && h.getName().equals(name)) {
+				returningHuman = h
 			}
 			
 		}
-		
+		return returningHuman;
 	}
 
 }

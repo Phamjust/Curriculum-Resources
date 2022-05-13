@@ -20,13 +20,13 @@ public class MainDriver {
 		
 		HumanArrayImpl hArray = new HumanArrayImpl();
 		hArray.addHuman(new Human("Bob",2));
-		hArray.addHuman(new Human("Bob",2));
-		hArray.addHuman(new Human("Bob",2));
-		hArray.addHuman(new Human("Bob",2));
-		hArray.addHuman(new Human("Bob",2));
+		hArray.addHuman(new Human("Justin",2));
+		hArray.addHuman(new Human("Austin",2));
+		hArray.addHuman(new Human("Brandy",2));
+		hArray.addHuman(new Human("Cody",2));
 		
 		hArray.printAllTheHumans();
-		
+		System.out.printLn(hArray.findHumanByName("Justin"));
 		
 		
 		/*
